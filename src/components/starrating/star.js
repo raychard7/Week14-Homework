@@ -9,7 +9,7 @@ const colors ={
 }
 
 function Star(){
-
+console.log("star")
   const stars = Array(5).fill(0);
   return(
     <div style={styles.container}>
@@ -35,3 +35,5 @@ const styles = {
     alignItems: "center",
   }
 }
+
+export default Star ;
