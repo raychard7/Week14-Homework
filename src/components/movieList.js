@@ -13,13 +13,13 @@ export default class MovieList extends React.Component {
       let mymovies = [
         {
             title: "Star Wars",
-            synopsis: "Orphan samurai wizards search for their dads!",
+            synopsis: "An Orphan samurai wizard gets a surprise visit from his dad!",
             rating: "5/5",
             image: "./public/images/starwars.jpg",
         },
         {
             title: "Man of Steel",
-            synopsis: "Alien Farmer kid moves to the big city to live it large.",
+            synopsis: "Alien Farmer  moves to the big city to live it large.",
             rating: "4.5/5",
             image: "/images/superman.jpg",
         },
@@ -30,12 +30,13 @@ export default class MovieList extends React.Component {
             image: "images/batman.jpg",
         }
       ]    
-      let starwars= {
-        title: "Star Wars",
-        synopsis: "Orphan samurai wizards search for their dads!",
-        rating: "5/5",
-        image: "./public/images/starwars.jpg",
-    }
+
+    //   let starwars= {
+    //     title: "Star Wars",
+    //     synopsis: "Orphan samurai wizards search for their dads!",
+    //     rating: "5/5",
+    //     image: "./public/images/starwars.jpg",
+    // }
      
       
       
@@ -44,8 +45,10 @@ export default class MovieList extends React.Component {
       
         <div className= "card-group">
             
-            <Movie {...starwars} />
-           
+            <Movie {...mymovies} />
+        {/* <Movie title="Man of Steel" image="./images/superman.jpg" synopsis="Alien Farmer  moves to the big city to live it large." rating="5/5" />
+            <Movie title="Star Wars" image="./images/starwars.jpg" synopsis="An Orphan samurai wizard gets a surprise visit from his dad!" rating="5/5" />
+            <Movie title="Batman" image="./images/batman.jpg" synopsis="Kid finds out his superpower is being rich and he buys the most expensive leather suit he can find!" rating="5/5" /> */}
             
         </div>
         

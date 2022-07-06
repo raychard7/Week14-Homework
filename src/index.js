@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './index.css';
@@ -8,8 +8,10 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-    <MovieList />
+    <StrictMode>
+      <MovieList />
+    </StrictMode>
+    
   
 );
 
