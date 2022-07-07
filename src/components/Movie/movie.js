@@ -1,5 +1,5 @@
 import React from 'react'
-import Star from '../starrating/star';
+import StarRating from '../starrating/stars';
 import "./movie.css";
 export default class Movie extends React.Component {
 
@@ -34,9 +34,9 @@ export default class Movie extends React.Component {
             <li className="list-group-item">{this.state.rating}</li>
         </ul>
         <div className='card-footer'>
-          {/*<Star />
-          <ReviewButton />
-          <ReviewList />*/}
+          <StarRating />
+          {/* <ReviewButton />
+          <ReviewList /> */}
         
          
         </div>
