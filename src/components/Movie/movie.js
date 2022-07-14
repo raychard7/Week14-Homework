@@ -1,7 +1,10 @@
 import React from 'react'
 import StarRating from '../starrating/stars';
+import ReviewList from '../reviewList';
 import "./movie.css";
+
 export default class Movie extends React.Component {
+
 
     constructor(props){
         super(props);
@@ -31,16 +34,14 @@ export default class Movie extends React.Component {
           <p className= "card-text"> {this.state.synopsis}</p>
         </div>
         <ul className= "list-group list-group-flush">
-            <li className="list-group-item">{this.state.rating}</li>
+            <li className="list-group-item">Critics Rating {this.state.rating}</li>
         </ul>
-        <div className='card-footer'>
-          <StarRating />
-          {/* <ReviewButton />
-          <ReviewList /> */}
+   
+        <ReviewList  />
         
          
         </div>
-      </div>
+     
 
     )
   }
