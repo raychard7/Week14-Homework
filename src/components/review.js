@@ -7,12 +7,13 @@ export default class Review extends React.Component {
       return (
         <div className="card w-100">
           <div className="card-header bg-success text-white">
-            username
-            {/* {this.props.username} */}
+            
+            {this.props.username}
           </div>
           <div className="card-body">
-            Review 
-            {/* {this.props.Review} */}
+             Review: {this.props.review}
+          
+            {this.props.review}
             <p>stars</p>
           </div>
           <div className="card-footer">

@@ -11,7 +11,8 @@ export default class ReviewList extends React.Component {
   constructor(props){
     super(props)
     this.state={
-      usernames:[]
+      usernames:[],
+      reviews:[]
       // username: "",
       // review: "",
       // submit: ""
@@ -39,7 +40,12 @@ export default class ReviewList extends React.Component {
     this.setState({
       //How to submit both username and review text.
       // submit:this.state.username
-      usernames:[...this.state.usernames,this.state]
+
+      //[arg1=spread operater takes in everything from username input and dumps into usernames[]. Gathers data, arg2= sends data ]
+      usernames:[...this.state.usernames,this.state],
+      //this.state reference array of objects.
+
+      reviews:[...this.state.reviews,this.state]
     })
     
   }
@@ -64,18 +70,27 @@ export default class ReviewList extends React.Component {
         placeholder="Enter username" name="username" onChange={this.handleUserNameChange} />
 
         
-        {/* <textarea value={this.state.review} type="submit" onChange={this.handleReviewChange}  className="form-control" id="reviewtext" rows="10"  placeholder="Enter Review" /> */}
-        <input type="submit" value="submit"/>
+        <textarea value={this.state.review} type="submit" onChange={this.handleReviewChange}  className="form-control" id="reviewtext" rows="10"  placeholder="Enter Review" />
+        <input type="submit" value="submit" class= "btn btn-primary" />
       </div>
-      
-      {/* <ReviewButton  /> */}
+  
     </form>
 
       <h1>Reviews</h1>
-      {this.state.usernames.map((username,index)=>(<p key={index}>{username.username}</p>))}
-    {/* <Review username={this.state.username}  review={this.state.review} /> */}
-    
       
+      {/* <Review username={this.state.username}  review={this.state.review} /> */}
+      {/* The map() function is used to iterate over an array and manipulate or change data. */}
+      {/* array with 2 objects per entry [object object] */}
+      {/* The key is for the map to iterate and have index value, does not render. */}
+      {/* 
+      1st username: usernames array current i.
+      2nd username:At that specific current state
+      */}
+      {this.state.usernames.map((username,index)=>(<p key={index}>{username.username}</p>))}
+
+      {this.state.reviews.map((review,index)=>(<p key={index}>{review.review}</p>))}
+
+
   </div>
 </div>
     )
